@@ -1,0 +1,28 @@
+classDiagram
+    namespace modelo{
+    class Atleta{
+      - nome: String
+      
+      +getNome() String
+      +setNome(nome:String)
+    }
+    class Time{
+      - atletas: List 
+    }
+    }
+    Time o-- Atleta
+    class Apartamento{
+        - numero:String
+    }
+    class Predio{
+        - apartamentos:List
+    }
+    Predio *-- Apartamento
+    class Pagamento{
+        <<interface>>
+        +processar()
+    }
+    class Cartao{
+    }
+    Cartao ..|> Pagamento
+    
